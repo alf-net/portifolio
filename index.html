@@ -32,5 +32,15 @@
 </head>
 <body>
   <img class="top-gif" src="mynamesalf.gif" alt="">
+  <audio id="background-audio" autoplay loop preload="auto">
+    <source src="air-supply.webm" type="audio/webm">
+  </audio>
+  <script>
+    const audio = document.getElementById("background-audio");
+    audio.play().catch(() => {
+      document.addEventListener("click", () => audio.play(), { once: true });
+      document.addEventListener("touchstart", () => audio.play(), { once: true });
+    });
+  </script>
 </body>
 </html>
