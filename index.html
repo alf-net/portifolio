@@ -26,6 +26,20 @@
       display: block;
     }
 
+    .feedback-link {
+      position: fixed;
+      z-index: 4;
+      bottom: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      color: white;
+      font-family: "Times New Roman", Times, serif;
+      font-size: 12px;
+      white-space: nowrap;
+      text-decoration: underline;
+      text-shadow: 1px 1px 2px black;
+    }
+
     .top-gif {
       display: block;
       position: absolute;
@@ -71,5 +85,6 @@
       document.addEventListener("touchstart", () => audio.play(), { once: true });
     });
   </script>
+  <a class="feedback-link" href="feedback.html">have you been touched by our website? let us know!</a>
 </body>
 </html>
