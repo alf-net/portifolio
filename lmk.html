@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Let us know</title>
+  <style>
+    * { box-sizing: border-box; }
+
+    html, body {
+      min-height: 100%;
+      margin: 0;
+    }
+
+    body {
+      min-height: 100vh;
+      padding: 40px 20px;
+      color: #111;
+      font-family: "Times New Roman", Times, serif;
+    }
+
+    main {
+      width: min(760px, 100%);
+      margin: 0 auto;
+    }
+
+    h1 {
+      margin: 0 0 28px;
+      font-size: clamp(28px, 5vw, 48px);
+      font-weight: normal;
+    }
+
+    form {
+      display: grid;
+      gap: 18px;
+    }
+
+    input, textarea {
+      width: 100%;
+      border: 1px solid #777;
+      border-radius: 0;
+      padding: 14px;
+      background: #fff;
+      color: #111;
+      font: 20px "Times New Roman", Times, serif;
+    }
+
+    input::placeholder, textarea::placeholder {
+      color: #999;
+      opacity: 1;
+    }
+
+    textarea {
+      min-height: 220px;
+      resize: vertical;
+    }
+
+    button {
+      min-height: 76px;
+      border: 2px solid #111;
+      border-radius: 0;
+      background: #111;
+      color: white;
+      cursor: pointer;
+      font: 28px "Times New Roman", Times, serif;
+    }
+
+    button:hover {
+      background: #444;
+    }
+
+    .back {
+      display: inline-block;
+      margin-top: 24px;
+      color: #111;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Your contribution to our mission is apprecited.</h1>
+    <form id="feedback-form">
+      <input name="name" type="text" placeholder="NAME" aria-label="NAME">
+      <input name="email" type="email" placeholder="EMAIL (OPTIONAL)" aria-label="EMAIL (OPTIONAL)">
+      <textarea name="message" placeholder="MESSAGE" aria-label="MESSAGE"></textarea>
+      <button type="submit">SUBMIT</button>
+    </form>
+    <a class="back" href="index.html">← Back to the website</a>
+  </main>
+
+  <script>
+    const colors = ["#f4f1ea", "#d9eaf7", "#f8d8df", "#dcefd9", "#eee0c8", "#e3dcf5"];
+    document.body.style.backgroundColor =
+      colors[Math.floor(Math.random() * colors.length)];
+
+    document.getElementById("feedback-form").addEventListener("submit", function (event) {
+      event.preventDefault();
+      alert("Message delivery has not been connected yet.");
+    });
+  </script>
+</body>
+</html>
