@@ -26,6 +26,21 @@
       display: block;
     }
 
+    #message-image-link {
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 6;
+      display: block;
+      line-height: 0;
+    }
+
+    #message-image {
+      display: block;
+      width: 110px;
+      height: 40px;
+    }
+
     .feedback-link {
       position: fixed;
       z-index: 4;
@@ -55,6 +70,9 @@
   </style>
 </head>
 <body>
+  <a id="message-image-link" href="message.html" aria-label="Open message page">
+    <img id="message-image" src="alf.lat.gif" alt="">
+  </a>
   <img id="random-image" alt="">
 
   <img class="top-gif" src="mynamesalf.gif" alt="">
@@ -86,5 +104,11 @@
     });
   </script>
   <a class="feedback-link" href="lmk.html">have you been touched by our website? let us know!</a>
+  <script>
+    document.addEventListener("click", (event) => {
+      if (event.target.closest("#message-image-link")) return;
+      window.location.reload();
+    });
+  </script>
 </body>
 </html>
