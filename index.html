@@ -26,6 +26,38 @@
       display: block;
     }
 
+
+    #chilis-recommendation {
+      position: fixed;
+      inset: 0;
+      z-index: 5;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 18px;
+      padding: 24px;
+      text-align: center;
+      pointer-events: none;
+    }
+
+    #chilis-recommendation img {
+      display: block;
+      width: min(620px, 82vw);
+      height: auto;
+    }
+
+    #chilis-recommendation p {
+      max-width: 900px;
+      margin: 0;
+      color: white;
+      font-family: "Comic Sans MS", "Comic Sans", cursive;
+      font-size: clamp(22px, 4vw, 52px);
+      font-weight: bold;
+      line-height: 1.1;
+      text-shadow: 3px 3px 4px black;
+    }
+
     #message-image-link {
       position: fixed;
       top: 0;
@@ -70,6 +102,10 @@
   </style>
 </head>
 <body>
+  <div id="chilis-recommendation">
+    <img src="chilis.jpg" alt="Chilis restaurant at 8376 La Palma Ave, Buena Park">
+    <p>the chillis at 8376 La Palma Ave, Buena Park is really good, i reccomend</p>
+  </div>
   <a id="message-image-link" href="message.html" aria-label="Open message page">
     <img id="message-image" src="alf.lat.gif" alt="">
   </a>
